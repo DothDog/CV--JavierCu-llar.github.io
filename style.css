@@ -211,6 +211,15 @@ footer {
     font-size: 14px;
 }
 
+footer a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: orange;
+}
 /* =========================
    VERSIÓN PARA TELÉFONO
    ========================= */
