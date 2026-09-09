@@ -108,38 +108,58 @@ footer {
 .timeline-nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #111;
     border-bottom: 1px solid #111;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .timeline-nav button {
-    background: none;
+    position: relative;
+
+    background: transparent;
     border: none;
     border-right: 1px solid #111;
-    padding: 15px 10px;
+
+    padding: 18px 15px 18px 30px;
+
     font-family: monospace;
     font-size: 12px;
     text-align: left;
+
+    color: #111;
     cursor: pointer;
+
+    transition: background 0.2s ease,
+                color 0.2s ease;
 }
 
 .timeline-nav button:last-child {
     border-right: none;
 }
 
+/* El pequeño punto */
+.timeline-nav button::before {
+    content: "○";
+
+    position: absolute;
+    left: 10px;
+    top: 17px;
+
+    font-size: 12px;
+
+    transition: transform 0.2s ease;
+}
+
+/* Hover */
 .timeline-nav button:hover {
     background: #111;
     color: #f2f2f0;
 }
 
-.ciclo {
-    display: none;
+.timeline-nav button:hover::before {
+    content: "●";
+    transform: scale(1.1);
 }
-
-.ciclo.activo {
-    display: block;
-}
-
 
 /* =========================
    VERSIÓN PARA TELÉFONO

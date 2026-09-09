@@ -276,23 +276,21 @@
                 02 / EXPERIENCIA
             </div>
         
-            <div class="timeline">
-        
-                <div class="timeline-nav">
-        
-                    <button onclick="mostrarCiclo('ciclo1')">
-                        CICLO 1
-                    </button>
-        
-                    <button onclick="mostrarCiclo('ciclo2')">
-                        CICLO 2
-                    </button>
-        
-                    <button onclick="mostrarCiclo('actualidad')">
-                        ACTUALIDAD
-                    </button>
-        
-                </div>
+            <div class="timeline-nav">
+
+                <button class="activo" onclick="mostrarCiclo('ciclo1', this)">
+                    CICLO 1
+                </button>
+            
+                <button onclick="mostrarCiclo('ciclo2', this)">
+                    CICLO 2
+                </button>
+            
+                <button onclick="mostrarCiclo('actualidad', this)">
+                    ACTUALIDAD
+                </button>
+            
+            </div>
         
         
                 <div id="ciclo1" class="ciclo activo">
@@ -392,16 +390,21 @@
     </main>
     <script>
 
-        function mostrarCiclo(ciclo) {
+        function mostrarCiclo(ciclo, boton) {
         
             const ciclos = document.querySelectorAll(".ciclo");
+            const botones = document.querySelectorAll(".timeline-nav button");
         
             ciclos.forEach(function(elemento) {
                 elemento.classList.remove("activo");
             });
         
-            document.getElementById(ciclo).classList.add("activo");
+            botones.forEach(function(elemento) {
+                elemento.classList.remove("activo");
+            });
         
+            document.getElementById(ciclo).classList.add("activo");
+            boton.classList.add("activo");
         }
         
         </script>
