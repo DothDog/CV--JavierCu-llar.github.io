@@ -176,8 +176,40 @@ footer {
 .timeline-nav button:hover::before {
     content: "●";
     transform: scale(1.1);
+
 }
 
+/* =========================
+   EDUCACIÓN
+   ========================= */
+
+.education {
+    border-top: 1px solid #111;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #111;
+}
+
+.education-year {
+    font-size: 12px;
+}
+
+.education-info h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.education-info p {
+    font-size: 14px;
+}
 
 /* =========================
    VERSIÓN PARA TELÉFONO
@@ -227,4 +259,9 @@ footer {
     .timeline-nav button:last-child {
         border-bottom: none;
     }
+    .education-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
 }
