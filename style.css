@@ -113,6 +113,23 @@ footer {
     margin-bottom: 50px;
 }
 
+/* =========================
+   CICLOS DE EXPERIENCIA
+   ========================= */
+
+   .ciclo {
+    display: none;
+}
+
+.ciclo.activo {
+    display: block;
+}
+
+/* Punto del ciclo seleccionado */
+.timeline-nav button.activo::before {
+    content: "●";
+}
+
 .timeline-nav button {
     position: relative;
 
@@ -160,6 +177,7 @@ footer {
     content: "●";
     transform: scale(1.1);
 }
+
 
 /* =========================
    VERSIÓN PARA TELÉFONO
