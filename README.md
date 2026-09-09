@@ -2,4 +2,4 @@
 
 ### CURRICULUM VITAE
 
-👉 [Ver CV online](CV--JavierCu-llar.github.io)
+👉 [Ver CV online](https://dothdog.github.io/CV--JavierCu-llar.github.io/)
