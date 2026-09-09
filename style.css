@@ -105,6 +105,40 @@ footer {
     justify-content: space-between;
     font-size: 12px;
 }
+.timeline-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #111;
+    margin-bottom: 40px;
+}
+
+.timeline-nav button {
+    background: none;
+    border: none;
+    border-right: 1px solid #111;
+    padding: 15px 10px;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.timeline-nav button:last-child {
+    border-right: none;
+}
+
+.timeline-nav button:hover {
+    background: #111;
+    color: #f2f2f0;
+}
+
+.ciclo {
+    display: none;
+}
+
+.ciclo.activo {
+    display: block;
+}
 
 
 /* =========================
@@ -142,5 +176,17 @@ footer {
     footer {
         flex-direction: column;
         gap: 10px;
+    }
+    .timeline-nav {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-nav button {
+        border-right: none;
+        border-bottom: 1px solid #111;
+    }
+    
+    .timeline-nav button:last-child {
+        border-bottom: none;
     }
 }

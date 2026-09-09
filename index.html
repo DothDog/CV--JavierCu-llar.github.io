@@ -270,6 +270,94 @@
             </div>
         </div>
         </section>
+        <section>
+
+            <div class="section-title">
+                02 / EXPERIENCIA
+            </div>
+        
+            <div class="timeline">
+        
+                <div class="timeline-nav">
+        
+                    <button onclick="mostrarCiclo('ciclo1')">
+                        CICLO 1
+                    </button>
+        
+                    <button onclick="mostrarCiclo('ciclo2')">
+                        CICLO 2
+                    </button>
+        
+                    <button onclick="mostrarCiclo('actualidad')">
+                        ACTUALIDAD
+                    </button>
+        
+                </div>
+        
+        
+                <div id="ciclo1" class="ciclo activo">
+        
+                    <div class="experience">
+                        <div class="year">
+                            2024 — 2025
+                        </div>
+        
+                        <div class="job">
+                            <h2>Primer trabajo</h2>
+        
+                            <p>
+                                Descripción de tu experiencia,
+                                responsabilidades y lo que aprendiste.
+                            </p>
+                        </div>
+                    </div>
+        
+                </div>
+        
+        
+                <div id="ciclo2" class="ciclo">
+        
+                    <div class="experience">
+                        <div class="year">
+                            2025 — 2026
+                        </div>
+        
+                        <div class="job">
+                            <h2>Segundo trabajo</h2>
+        
+                            <p>
+                                Descripción de tu experiencia,
+                                responsabilidades y lo que aprendiste.
+                            </p>
+                        </div>
+                    </div>
+        
+                </div>
+        
+        
+                <div id="actualidad" class="ciclo">
+        
+                    <div class="experience">
+        
+                        <div class="year">
+                            2026 — AHORA
+                        </div>
+        
+                        <div class="job">
+                            <h2>Actualidad</h2>
+        
+                            <p>
+                                Lo que estás haciendo actualmente.
+                            </p>
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </section>
 
         <!-- HABILIDADES-->
         <section>
@@ -302,6 +390,20 @@
         </footer>
 
     </main>
-    
+    <script>
+
+        function mostrarCiclo(ciclo) {
+        
+            const ciclos = document.querySelectorAll(".ciclo");
+        
+            ciclos.forEach(function(elemento) {
+                elemento.classList.remove("activo");
+            });
+        
+            document.getElementById(ciclo).classList.add("activo");
+        
+        }
+        
+        </script>
 </body>
 </html>
